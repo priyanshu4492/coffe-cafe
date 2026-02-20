@@ -1,3 +1,4 @@
+import 'package:coffee_01/responsive/dimension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -15,7 +16,7 @@ class ResponsiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
     builder: (context,Constraints){
-        if(Constraints.maxWidth<600){
+        if(Constraints.maxWidth<mobileWidth){
               return mobileBody;
         }else {
           return desktopBody;
